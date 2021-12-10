@@ -1,0 +1,9 @@
+93ecb6fec52a17ad77f30975f7108343 *DESCRIPTION
+14f7ed0ac142738e3f6a2cc5eb8a3acf *NAMESPACE
+5989e34c457d8d6e15d360fca160dc7d *R/stepgbm.R
+a8c3fc02ff1baf67ce7a1aefd689eae8 *R/stepgbmRVI.R
+2384f0af58235cf01fd233a9fb57bba0 *man/cran-comments.Rd
+114356371cefd13d1ae5ada228c97eb8 *man/stepgbm.Rd
+5ec8f02edc7f2f94e667ac052ed25924 *man/stepgbmRVI.Rd
+c8bd40ba1d51f66567acc50556166f5e *tests/stepgbmRVI_test.R
+a8979587b6bb016e4561438605244fdf *tests/stepgbm_test.R
