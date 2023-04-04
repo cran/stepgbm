@@ -116,7 +116,7 @@ corresponding predictive accuracy. It is also developed for 'stepgbm' function.
 library(spm)
 data(petrel)
 stepgbm1 <- stepgbmRVI(trainx = petrel[, c(1,2, 6:9)], trainy = log(petrel[, 5] + 1),
- cv.fold = 5, min.n.var = 2, n.cores = 6, rseed = 1234)
+ cv.fold = 5, min.n.var = 2, n.cores = 2, rseed = 1234)
 stepgbm1
 
 #plot stepgbm1 results
@@ -139,7 +139,7 @@ steprfAVIPredictors(stepgbm1, trainx = petrel[, c(1,2, 6:9)])
 data(sponge)
 set.seed(1234)
 stepgbm2 <- stepgbmRVI(trainx = sponge[, -3], trainy = sponge[, 3],
-family = "poisson", cv.fold = 5, min.n.var = 2, n.cores = 6)
+family = "poisson", cv.fold = 5, min.n.var = 2, n.cores = 2)
 stepgbm2
 
 #plot stepgbm2 results

@@ -1,9 +1,9 @@
-93ecb6fec52a17ad77f30975f7108343 *DESCRIPTION
+561132141a7607bf35f5a620caa6b9d0 *DESCRIPTION
 14f7ed0ac142738e3f6a2cc5eb8a3acf *NAMESPACE
-5989e34c457d8d6e15d360fca160dc7d *R/stepgbm.R
-a8c3fc02ff1baf67ce7a1aefd689eae8 *R/stepgbmRVI.R
+368efcd69189697e696072a7c0ca7023 *R/stepgbm.R
+2a51dd8e92a3cdfc6bb5b0bdd7444927 *R/stepgbmRVI.R
 2384f0af58235cf01fd233a9fb57bba0 *man/cran-comments.Rd
-114356371cefd13d1ae5ada228c97eb8 *man/stepgbm.Rd
-5ec8f02edc7f2f94e667ac052ed25924 *man/stepgbmRVI.Rd
-c8bd40ba1d51f66567acc50556166f5e *tests/stepgbmRVI_test.R
-a8979587b6bb016e4561438605244fdf *tests/stepgbm_test.R
+f58bb92864e5137144d27b01cc99d209 *man/stepgbm.Rd
+933a85ca8bd9b1830cd7582c900812ba *man/stepgbmRVI.Rd
+bbdea15ffdeef23102a1fa5e09311968 *tests/stepgbmRVI_test.R
+698e51dd92525110aed683b9aa2e3dae *tests/stepgbm_test.R

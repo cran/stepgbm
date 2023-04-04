@@ -5,7 +5,10 @@
 #' generalized boosted regression modeling (gbm) based on various variable influence
 #'  methods (i.e., relative variable influence (RVI) and knowledge informed RVI
 #'  (i.e., KIRVI, and KIRVI2)) and predictive accuracy. It is implemented via the functions
-#'  'stepgbmRVI' and 'steprf::steprfAVIPredictors'.
+#'  'stepgbmRVI' and 'steprf::steprfAVIPredictors'. It should be noted that this function
+#'   can be slow, may taking several minutes, hours or even days depending on the
+#'    number of the predictive variables to be selected and the specifications of
+#'    relevant arguments.
 #'
 #' @param trainx a dataframe or matrix contains columns of predictive variables.
 #' @param trainy a vector of response, must have length equal to the number of
@@ -77,7 +80,10 @@
 #'    it suggests that these variables should be tested if the predictive
 #'    accuracy can be further improved.
 #'
-#' @references Li, J., Siwabessy, J., Huang, Z., Nichol, S. (2019). "Developing
+#' @references Li, J. (2022). Spatial Predictive Modeling with R. Boca Raton,
+#' Chapman and Hall/CRC.
+#'
+#' Li, J., Siwabessy, J., Huang, Z., Nichol, S. (2019). "Developing
 #' an optimal spatial predictive model for seabed sand content using machine
 #' learning, geostatistics and their hybrid methods." Geosciences 9 (4):180.
 #'
@@ -98,10 +104,11 @@
 #' library(spm)
 #'
 #' data(petrel)
+#'
 #' stepgbm1 <- stepgbm(trainx = petrel[, c(1,2, 6:9)], trainy =
 #' log(petrel[, 5] + 1), method = "KIRVI", family = "gaussian", rpt = 2,
-#' predacc = "VEcv", cv.fold = 5,  min.n.var = 2,
-#' n.cores = 6, delta.predacc = 0.01, rseed = 1234)
+#' predacc = "VEcv", cv.fold = 5,  min.n.var = 2, n.cores = 2,
+#' delta.predacc = 0.01, rseed = 1234)
 #' names(stepgbm1)
 #' stepgbm1$stepgbmPredictorsFinal$variables.most.accurate
 #' stepgbm1$max.predictive.accuracy
@@ -113,7 +120,7 @@
 #' data(sponge)
 #' stepgbm2 <- stepgbm(trainx = sponge[, -3], trainy = sponge[, 3], method = "KIRVI",
 #' family = "poisson", rpt = 2, cv.fold = 5, predacc = "VEcv", min.n.var = 2,
-#'  n.cores = 6, delta.predacc = 0.01, rseed = 1234)
+#' n.cores = 2, delta.predacc = 0.01, rseed = 1234)
 #' stepgbm2
 #' stepgbm2$max.predictive.accuracy
 #'

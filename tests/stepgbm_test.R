@@ -1,4 +1,5 @@
 #' library(spm)
+#' library(stepgbm)
 #'
 #' data(petrel)
 #' stepgbm1 <- stepgbm(trainx = petrel[, c(1,2, 6:9)], trainy =

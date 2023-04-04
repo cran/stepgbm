@@ -1,4 +1,6 @@
 #' library(spm)
+#' library(stepgbm)
+#' 
 #' data(petrel)
 #' stepgbm1 <- stepgbmRVI(trainx = petrel[, c(1,2, 6:9)], trainy = log(petrel[, 5] + 1),
 #' learning.rate = 0.1, n.trees = 20, cv.fold = 5, min.n.var = 2, n.cores = 2, rseed = 1234)
